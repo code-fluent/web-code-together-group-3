@@ -1,0 +1,18 @@
+h1,
+h2,
+h3 {
+  color: red;
+}
+
+#heading2 {
+  color: green;
+  /* TODO: Rewrite with classes */
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
