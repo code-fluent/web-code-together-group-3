@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <title>Flexbox</title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      .container {
+        display: flex;
+        height: 100vh;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        order: 4;
+        height: 200px;
+        width: 200px;
+        background-color: darksalmon;
+        border: 5px solid #d2d2d2;
+        font-size: 24px;
+        color: #fff;
+      }
+
+      .special {
+      }
+
+      .first {
+        order: 1;
+      }
+
+      .second {
+        order: 2;
+      }
+
+      .third {
+        order: 3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card second special">1</div>
+      <div class="card first">2</div>
+      <div class="card third">3</div>
+      <div class="card">4</div>
+      <div class="card">5</div>
+      <div class="card">6</div>
+      <div class="card">7</div>
+      <div class="card">8</div>
+      <div class="card">9</div>
+      <div class="card">10</div>
+      <div class="card">11</div>
+      <div class="card">12</div>
+    </div>
+  </body>
+</html>
