@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>Animations</title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: orangered;
+        animation: moveToRight 3s ease-in forwards infinite;
+      }
+
+      @keyframes moveToRight {
+        0% {
+          transform: none;
+        }
+        25% {
+          transform: translate(calc(100vw - 200px), 0) rotate(45deg);
+        }
+        50% {
+          transform: translate(calc(100vw - 200px), calc(100vh - 200px))
+            rotate(90deg);
+        }
+        75% {
+          transform: translate(0, calc(100vh - 200px)) rotate(135deg);
+        }
+        100% {
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

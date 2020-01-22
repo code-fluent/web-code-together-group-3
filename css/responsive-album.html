@@ -1,0 +1,86 @@
+<html>
+  <head>
+    <title>Responsive album</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: Montserrat;
+      }
+
+      .title {
+        font-size: 24px;
+      }
+
+      .content {
+        max-width: 1080px;
+        margin: 40px auto 0;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        padding-bottom: 13.33%;
+        background-color: #ac65ec;
+      }
+
+      @media only screen and (min-width: 800px) {
+        .card {
+          width: 18.51%;
+          margin: 0 1.85% 1.85% 0;
+        }
+
+        .card:nth-child(5n) {
+          margin-right: 0;
+        }
+      }
+
+      @media only screen and (min-width: 400px) and (max-width: 799px) {
+        .card {
+          width: 31.4%;
+          margin: 0 2.81% 2.81% 0;
+        }
+
+        .card:nth-child(3n) {
+          margin-right: 0;
+        }
+      }
+
+      @media only screen and (max-width: 399px) {
+        .card {
+          width: 100%;
+          margin: 0 0 20px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h1 class="title">Los Angeles</h1>
+      <div class="container">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>Transitions</title>
+    <style>
+      .box {
+        width: 400px;
+        height: 400px;
+        background-color: darkorange;
+        transition: background-color 3s linear, width 2s linear,
+          height 2s linear;
+      }
+
+      .box:hover {
+        width: 600px;
+        height: 600px;
+        background-color: deeppink;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
