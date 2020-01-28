@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>Operators</title>
+  </head>
+  <body>
+    <script>
+      var modulo = 8 % 3;
+      console.log(modulo);
+
+      var a = 5;
+      a = a + 1;
+      console.log(a);
+
+      a++;
+      console.log(a);
+
+      a += 2;
+
+      var john = "John";
+      var jane = "Jane";
+      var result = john + jane;
+
+      console.log(result);
+
+      var x = 1;
+      var y = "1";
+      var areEqual = x === y;
+      var areDifferent = x !== y;
+      console.log("are equal", areEqual);
+      console.log("are different", areDifferent);
+
+      var notTrue = !true;
+      console.log(notTrue);
+
+      var isAdult = true;
+      var passedExam = false;
+      var isHealthy = true;
+      var hasPoliceParent = true;
+      var canHaveDriverLicense =
+        (isAdult && passedExam && isHealthy) || hasPoliceParent;
+
+      console.log("can have licence", canHaveDriverLicense);
+    </script>
+  </body>
+</html>
