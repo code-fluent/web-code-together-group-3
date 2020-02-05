@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Is prime number</title>
+  </head>
+  <body>
+    <script>
+      function isPrime(number) {
+        if (number === 0) return false;
+        for (var i = 2; i < number; i++) {
+          if (number % i === 0) {
+            return false;
+          }
+        }
+
+        return true;
+      }
+
+      for (var i = 0; i <= 10; i++) {
+        if (isPrime(i) === true) {
+          console.log(i);
+        }
+      }
+    </script>
+  </body>
+</html>
