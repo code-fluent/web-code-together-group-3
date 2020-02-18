@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Arrays ES6</title>
+    <script>
+      var array = ["John", "Mary", "Matthew"];
+      //   var john = array[0];
+      //   var mary = array[1];
+      //   var matthew = array[2];
+
+      var [john, mary, matthew] = array;
+
+      console.log(john);
+      console.log(mary);
+      console.log(matthew);
+
+      var negativeNumbers = [-3, -1, -2];
+      var positiveNumbers = [2, 1, 3];
+      //   var allNumbers = negativeNumbers.concat(positiveNumbers);
+      var allNumbers = [...negativeNumbers, ...positiveNumbers];
+      //   negativeNumbers.push(...positiveNumbers);
+      console.log(allNumbers);
+    </script>
+  </head>
+</html>

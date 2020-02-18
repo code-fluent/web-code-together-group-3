@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>Array methods</title>
+    <script>
+      var array = [5, 2, 1, 9, 4, 0];
+
+      // Find
+      var number = array.find(function(element) {
+        return element < 2;
+      });
+
+      console.log("number", number);
+
+      // Filter
+      var numbers = array.filter(function(element) {
+        return element < 2;
+      });
+
+      console.log("numbers", numbers);
+
+      // Map
+      var doubles = array.map(function(element) {
+        return element * 2;
+      });
+
+      console.log("doubles", doubles);
+
+      // Reduce - sum of elements
+      var sum = array.reduce(function(accumulator, element) {
+        return accumulator + element;
+      }, 0);
+
+      // Reduce - filter and map
+      var filteredAndDoubled = array.reduce(function(accumulator, element) {
+        if (element % 2 === 0) {
+          accumulator.push(element * 2);
+        }
+
+        return accumulator;
+      }, []);
+
+      // Filter names
+      var names = ["John", "Mary", "Matthew", "Jonathan", "William"];
+      var shortNames = names.filter(function(name) {
+        return name.length < 5;
+      });
+
+      console.log("short names", shortNames);
+    </script>
+  </head>
+</html>

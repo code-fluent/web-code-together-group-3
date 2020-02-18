@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>Arrays</title>
+    <script>
+      var array = [1, 2, 3];
+      console.log("Number of elements:", array.length);
+      console.log("The element at index 1", array[1]);
+
+      for (var i = 0; i < array.length; i++) {
+        console.log(array[i]);
+      }
+
+      // Add element to the end
+      array.push(4);
+      console.log("array", array);
+
+      // Add element to the start
+      array.unshift(0);
+      console.log("array", array);
+
+      // Add element to at and index
+      array.splice(3, 0, 2.5);
+      console.log("array", array);
+
+      // Delete element at index
+      array.splice(3, 1);
+      console.log("array", array);
+
+      // Delete all elements after index
+      array.splice(2, array.length - 2);
+      console.log("array", array);
+    </script>
+  </head>
+</html>
