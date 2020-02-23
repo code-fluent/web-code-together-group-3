@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>Lotto numbers</title>
+    <script>
+      var numbers = [];
+
+      while (numbers.length < 5) {
+        var number = Math.floor(Math.random() * 48 + 1);
+        if (!numbers.includes(number)) {
+          numbers.push(number);
+        }
+      }
+
+      console.log(numbers);
+    </script>
+  </head>
+</html>

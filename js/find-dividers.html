@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Find dividers</title>
+    <script>
+      function findDividers(number) {
+        var dividers = [];
+
+        for (var i = 1; i <= number; i++) {
+          if (number % i === 0) {
+            dividers.push(i);
+          }
+        }
+
+        return dividers;
+      }
+
+      var dividers = findDividers(10);
+      console.log(dividers);
+    </script>
+  </head>
+</html>

@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Palindrome</title>
+    <script>
+      function isPalindrome(string) {
+        // var reversed = "";
+        // for (var i = string.length - 1; i >= 0; i--) {
+        //   reversed = reversed + string[i];
+        // }
+
+        // return string === reversed;
+
+        return (
+          string ===
+          string
+            .split("")
+            .reverse()
+            .join("")
+        );
+      }
+
+      console.log(isPalindrome("madam"));
+    </script>
+  </head>
+</html>
