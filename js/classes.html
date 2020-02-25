@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <title>Classes</title>
+    <script>
+      class Car {
+        constructor(model, consumption, numberOfWheels = 4) {
+          this.model = model;
+          this.consumption = consumption;
+          this.numberOfWheels = numberOfWheels;
+          this.isEngineStarted = false;
+        }
+
+        startEngine() {
+          this.isEngineStarted = true;
+          console.log(`Engine started for ${this.model}`);
+        }
+
+        stopEngine() {
+          this.isEngineStarted = false;
+          console.log(`Engine stopped for ${this.model}`);
+        }
+      }
+
+      class Truck extends Car {
+        constructor(model, consumption, volume) {
+          super(model, consumption, 18);
+          this.isLoaded = false;
+          this.volume = volume;
+        }
+
+        load() {
+          this.isLoaded = true;
+          console.log(`${this.model} was loaded.`);
+        }
+
+        unload() {
+          this.isLoaded = false;
+          console.log(`${this.model} was unloaded.`);
+        }
+      }
+
+      const bwm = new Car("BWM", 0.9);
+      const audi = new Car("Audi", 1);
+      const volvoTruck = new Truck("Volvo", 10, 100);
+
+      bwm.startEngine();
+      audi.startEngine();
+      volvoTruck.startEngine();
+
+      bwm.stopEngine();
+      audi.stopEngine();
+      volvoTruck.stopEngine();
+
+      volvoTruck.load();
+      volvoTruck.unload();
+    </script>
+  </head>
+</html>

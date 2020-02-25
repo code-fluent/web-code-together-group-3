@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Promises</title>
+    <script>
+      const promise = new Promise(function(resolve, reject) {
+        setTimeout(function() {
+          const random = Math.random();
+
+          if (random < 0.5) {
+            resolve([1, 2, 3]);
+          } else {
+            reject("I was evil.");
+          }
+        }, 5000);
+      });
+
+      promise
+        .then(function(result) {
+          console.log("Result is", result);
+          //   throw Error("Error happened here..");
+        })
+
+        .catch(function(error) {
+          console.log("Something went wrong..", error);
+        })
+
+        .finally(function() {
+          console.log("This will be execute in each case.");
+        });
+    </script>
+  </head>
+</html>

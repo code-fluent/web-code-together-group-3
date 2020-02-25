@@ -15,14 +15,33 @@
       var isAdult = true;
       console.log("You are an adult", isAdult);
 
-      var car = {
+      var bmw = {
         model: "BMW",
         numberOfWheels: 4,
         consumption: 0.9,
-        isEngineStarted: false
+        isEngineStarted: false,
+        startEngine: function() {
+          this.isEngineStarted = true;
+        },
+        stopEngine: function() {
+          this.isEngineStarted = false;
+        }
       };
 
-      console.log(car);
+      var audi = {
+        model: "Audi",
+        numberOfWheels: 4,
+        consumption: 1,
+        isEngineStarted: false,
+        startEngine: function() {
+          this.isEngineStarted = true;
+        },
+        stopEngine: function() {
+          this.isEngineStarted = false;
+        }
+      };
+
+      console.log(bmw);
 
       var numbers = [1, 2, 3, 4, 5];
       console.log(numbers);
