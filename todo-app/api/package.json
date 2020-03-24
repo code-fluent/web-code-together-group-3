@@ -1,0 +1,15 @@
+{
+  "name": "api",
+  "version": "0.0.0",
+  "description": "The API for the todo app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tamas Pap <tamas@tamaspap.com>",
+  "license": "ISC",
+  "dependencies": {
+    "knex": "^0.20.13",
+    "mysql": "^2.18.1"
+  }
+}
