@@ -24,13 +24,16 @@ const deleteTodo = id =>
 const listTodos = () => knex.select("id", "title", "isCompleted").from("todos");
 
 const run = async () => {
-  await createTodo("Create your first todo.");
-  await createTodo("Create your second todo.");
-  await createTodo("Create your third todo.");
-  await toggleTodo(2, 1);
-  await deleteTodo(3);
-  const todos = await listTodos();
-  console.log("Todos: ", todos);
+  // await createTodo("Create your first todo.", 0);
+  // await createTodo("Create your second todo.", 0);
+  // await createTodo("Create your third todo.", 0);
+  // await toggleTodo(2, 1);
+  // await deleteTodo(3);
+  // const todos = await listTodos();
+  // console.log("Todos: ", todos);
+  const hashedPassword = await hashPassword('password')
+  const user = await createUser('username', hashedPassword)
+  await sendWelcomeEmail('tamas@tamaspap.com')
 };
 
 run();
