@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Counter</title>
+  </head>
+  <body>
+    <button id="decrement">-</button>
+    <h1 id="counter">0</h1>
+    <button id="increment">+</button>
+
+    <script>
+      let counter = 0;
+
+      const decrementButton = document.getElementById("decrement");
+      const incrementButton = document.getElementById("increment");
+      const counterText = document.getElementById("counter");
+
+      const increment = () => {
+        counter = counter + 1;
+        counterText.innerHTML = counter;
+      };
+
+      const decrement = () => {
+        counter = counter - 1;
+        counterText.innerHTML = counter;
+      };
+
+      incrementButton.addEventListener("click", increment);
+      decrementButton.addEventListener("click", decrement);
+    </script>
+  </body>
+</html>

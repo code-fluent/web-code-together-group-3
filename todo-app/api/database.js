@@ -1,14 +1,8 @@
-const knex = require("knex")({
-  client: "mysql",
-  connection: {
-    host: "localhost",
-    user: "developer",
-    password: "CODEit!(94",
-    database: "todos"
-  }
-});
+const config = require("./config");
+const knex = require("knex")(config);
 
-exports.listTodos = () => knex.select("id", "title", "isCompleted").from("todos");
+exports.listTodos = () =>
+  knex.select("id", "title", "isCompleted").from("todos");
 
 exports.createTodo = (title, isCompleted) =>
   knex("todos").insert({ title, isCompleted });

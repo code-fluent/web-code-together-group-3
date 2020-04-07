@@ -10,23 +10,21 @@ app.get("/todos", async (req, res) => {
 });
 
 app.post("/todos", async (req, res) => {
-  const title = req.body.title;
-  const isCompleted = req.body.isCompleted;
-
+  const { title, isCompleted } = req.body;
   await database.createTodo(title, isCompleted);
   res.json();
 });
 
 app.put("/todos/:id", async (req, res) => {
-  const id = req.params.id;
-  const isCompleted = req.body.isCompleted;
+  const { id } = req.params;
+  const { isCompleted } = req.body;
 
   await database.updateTodo(id, isCompleted);
   res.json();
 });
 
 app.delete("/todos/:id", async (req, res) => {
-  const id = req.params.id;
+  const { id } = req.params;
   await database.deleteTodo(id);
   res.json();
 });
