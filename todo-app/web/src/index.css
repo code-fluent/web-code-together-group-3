@@ -1,0 +1,10 @@
+.input {
+  padding: 6px 8px;
+  font-size: 18px;
+}
+
+.todo {
+  display: block;
+  margin-top: 6px;
+  font-size: 18px;
+}
