@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Filters from "./Filters";
 import TodoList from "./TodoList";
 import { listTodos, createTodo, updateTodo, deleteTodo } from "./todos";
+import { deleteUser, deleteAuthToken } from "./session";
 
 class TodoApp extends Component {
   constructor(props) {
@@ -69,6 +70,12 @@ class TodoApp extends Component {
     }
   };
 
+  logOut = () => {
+    deleteUser();
+    deleteAuthToken();
+    this.props.history.push("/signIn");
+  };
+
   render() {
     const filteredTodos = this.filterTodos(this.state.todos, this.state.filter);
 
@@ -92,6 +99,8 @@ class TodoApp extends Component {
           setFilterToCompleted={this.setFilterToCompleted}
           setFilterToIncompleted={this.setFilterToIncompleted}
         />
+
+        <button onClick={this.logOut}>Log out</button>
       </div>
     );
   }
